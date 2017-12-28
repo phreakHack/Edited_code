@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_easy_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
+    tools:context=".gui.hard.Hard_2">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/framelayout2"
+        >
+
+        <TextView
+            android:text="@string/hard_challenge_2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:id="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textStyle="normal|bold"
+            android:textSize="24sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/hardL"
+            android:padding="2dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:id="@+id/buttonOpenBrowserFrame"
+        android:layout_below="@+id/buttonOpenTerminalFrame"
+        android:layout_alignStart="@+id/buttonOpenTerminalFrame"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:text="Open Browser"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:id="@+id/buttonOpenBrowser"
+            android:onClick="openBrowser"
+            android:background="@color/hardL"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="160dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:id="@+id/submitLayout"-->
+        <!--android:layout_marginBottom="22dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignEnd="@+id/buttonOpenBrowserFrame"-->
+        <!--android:layout_marginEnd="21dp">-->
+
+        <!--<Button-->
+            <!--android:text="Submit"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:id="@+id/buttonSubmitHard_1"-->
+            <!--android:onClick="submitHard_1"-->
+            <!--android:background="@color/hardL"-->
+            <!--android:textStyle="normal|bold"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+    <!--</FrameLayout>-->
+
+    <FrameLayout
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:id="@+id/buttonOpenTerminalFrame"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/framelayout2"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:text="Open Terminal"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:id="@+id/buttonOpenTerminal"
+            android:onClick="openTerminal"
+            android:background="@color/hardL"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+    <!--<EditText-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="text"-->
+        <!--android:id="@+id/editText2"-->
+        <!--android:hint="Enter Answer"-->
+        <!--android:gravity="center"-->
+        <!--android:textColorHint="@color/hardL"-->
+        <!--android:textColor="@color/hardL"-->
+        <!--android:textStyle="normal|bold"-->
+        <!--android:textSize="14sp"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:layout_below="@+id/buttonOpenBrowserFrame"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="23dp" />-->
+</RelativeLayout>
+
+
+
+

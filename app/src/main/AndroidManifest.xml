@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.termux"
+    android:installLocation="internalOnly"
+    android:sharedUserId="com.termux"
+    android:sharedUserLabel="@string/shared_user_label">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:banner="@drawable/banner"
+        android:fullBackupContent="@xml/backupscheme"
+        android:icon="@drawable/logo1"
+        android:label="@string/application_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Termux">
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.LoginSuccess">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.Register" />
+        <!--<activity android:theme="@style/Theme.AppCompat" android:name=".gui.LoginSuccess" />-->
+        <!--<activity android:theme="@style/Theme.AppCompat" android:name=".gui.LoginSuccess" />-->
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.OpenEasyLevel" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_1" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_2" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_3" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_4" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_5" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_6" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_7" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_8" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_9" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_10" />
+
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.hard.Hard_1" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.hard.Hard_2" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.hard.Hard_3" />
+
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_1" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_2" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_3" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_4" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_5" />
+
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.easy.Easy_Cleared" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.medium.Medium_Cleared" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.hard.Hard_Cleared" />
+
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.OpenMediumLevel" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".gui.OpenHardLevel" />
+
+        <activity
+            android:name=".app.TermuxActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name=".app.TermuxHelpActivity"
+            android:exported="false"
+            android:label="@string/application_name"
+            android:parentActivityName=".app.TermuxActivity"
+            android:theme="@android:style/Theme.Material.Light.DarkActionBar" />
+        <activity
+            android:name=".filepicker.TermuxFileReceiverActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/application_name"
+            android:noHistory="true"
+            android:taskAffinity="com.termux.filereceiver">
+
+            <!-- Accept multiple file types when sending. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="message/*" />
+                <data android:mimeType="multipart/*" />
+                <data android:mimeType="text/*" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <!-- Be more restrictive for viewing files, restricting ourselves to text files. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/*" />
+                <data android:mimeType="application/json" />
+                <data android:mimeType="application/*xml*" />
+                <data android:mimeType="application/*latex*" />
+                <data android:mimeType="application/javascript" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".filepicker.TermuxDocumentsProvider"
+            android:authorities="com.termux.documents"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+        <service
+            android:name=".app.TermuxService"
+            android:exported="false" />
+    </application>
+
+</manifest>

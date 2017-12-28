@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="easyL">#991ba4</color>
+    <color name="medL">#ed1991</color>
+    <color name="hardL">@android:color/holo_blue_dark</color>
+
+</resources>

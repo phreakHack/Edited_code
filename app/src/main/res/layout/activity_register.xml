@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".gui.Register"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Register Here...!!!"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textColor="#602386"
+        >
+    </TextView>
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="350dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/editTextName"
+        android:hint="Name"
+        android:layout_marginTop="30dp"
+        android:textColorHint="#602386"
+        android:textColor="#602386"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textStyle="normal|bold"
+        />
+
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/editTextUsername"
+        android:hint="Username"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#602386"
+        android:textColor="#602386"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textStyle="normal|bold"
+        />
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/editTextPassword"
+        android:hint="Password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#602386"
+        android:textColor="#602386"
+        android:layout_gravity="center"
+        android:padding="10dp"
+
+        android:textStyle="normal|bold" />
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/editTextConfirmPassword"
+        android:hint="Confirm Password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#602386"
+        android:textColor="#602386"
+        android:layout_gravity="center"
+        android:padding="10dp"
+
+        android:textStyle="normal|bold" />
+
+    <!--<AutoCompleteTextView-->
+    <!--android:layout_width="310dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:inputType="text"-->
+    <!--android:id="@+id/editTextEmail"-->
+    <!--android:hint="      Email"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:textColorHint="#FFFFFF"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:padding="10dp"-->
+
+    <!--android:textStyle="normal|bold" />-->
+
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/editTextEmail"
+        android:hint="Email"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#602386"
+        android:textColor="#602386"
+        android:layout_gravity="center"
+        android:padding="10dp"
+
+        android:textStyle="normal|bold" />
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+         android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        >
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonRegister"
+            android:text="Register"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="#602386"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:layout_marginTop="0dp"
+            android:onClick="registerClickedinRegister"
+            android:layout_weight="0.16"
+            android:textStyle="normal|bold" />
+
+    </FrameLayout>
+
+
+    <!--<TextView-->
+    <!--android:text="Edit Url to change network(LAN)"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/textView2" />-->
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:ems="10"-->
+    <!--android:id="@+id/editUrl" />-->
+
+    <!--<Button-->
+    <!--android:text="CHANGE URL"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/geturl"-->
+    <!--android:onClick="sendurl"-->
+    <!--/>-->
+
+</LinearLayout>
